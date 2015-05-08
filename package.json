@@ -1,0 +1,17 @@
+{
+  "name": "db-browser",
+  "version": "1.0.0",
+  "description": "Tool to dump db schema in a deterministic order for comparison",
+  "main": "test.js",
+  "dependencies": {
+    "js-yaml": "^3.3.0",
+    "knex": "^0.8.3",
+    "sqlite3": "^3.0.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
