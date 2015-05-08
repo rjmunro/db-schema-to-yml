@@ -27,4 +27,6 @@ promise.then(function (results) {
     function (error) { console.log("error:", error); }
   );
   return promise;
+}).then(function () {
+  process.exit(0);
 });
