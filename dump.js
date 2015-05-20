@@ -23,7 +23,7 @@ promise.then(function (results) {
     });
   });
   promise.then(
-    function () { console.log(yaml.safeDump(tables, {sortKeys: true })); },
+    function () { console.log(yaml.safeDump({ tables: tables }, {sortKeys: true })); },
     function (error) { console.log("error:", error); }
   );
   return promise;
