@@ -1,7 +1,7 @@
 {
   "name": "db-browser",
   "version": "1.0.0",
-  "description": "Tool to dump db schema in a deterministic order for comparison",
+  "description": "Tool to dump db schema in a database independent way and deterministic order for comparison",
   "main": "test.js",
   "dependencies": {
     "js-yaml": "^3.3.1",
