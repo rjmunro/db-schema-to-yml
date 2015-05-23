@@ -19,6 +19,12 @@ promise.then(function (results) {
       return knex(tablesRow.name).columnInfo().then(function (tableInfo) {
         //console.log(tablesRow.name, ":", tableInfo)
         tables[tablesRow.name] = tableInfo;
+        return knex.raw('PRAGMA foreign_key_list("' + tablesRow.name + '")');
+      }).then(function (foreignKeys) {
+        foreignKeys.forEach(function (i) {
+          delete i.id;
+          tables[tablesRow.name][i.from].references = i
+        });
       });
     });
   });
